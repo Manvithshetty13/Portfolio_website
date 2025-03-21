@@ -1,19 +1,12 @@
-import emailjs from "@emailjs/browser";
 import { motion, useAnimation } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 
 const Contact = () => {
-  const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
   const controls = useAnimation();
 
   useEffect(() => {
@@ -47,23 +40,28 @@ const Contact = () => {
         <h3 className={styles.sectionText}>Contact</h3>
 
         <form
-          action="https://getform.io/f/8b086558-47d4-49d0-852d-ec8c22da40f7"
+          action="https://formspree.io/f/xyzeepoy"
           method="POST"
           className="mt-12 gap-4 flex flex-col"
+          onSubmit={() => setLoading(true)}
         >
+          <input type="hidden" name="_next" value={window.location.href} />
+          <input type="hidden" name="_subject" value="New contact from portfolio website" />
           <span className='text-white font-medium mt-3'>Full Name</span>
           <input
             type="text"
             name="name"
             placeholder="Enter your full name"
             className="bg-tertiary p-4 text-white border font-medium"
+            required
           />
           <span className='text-white font-medium mt-3'>Email Address</span>
           <input
-            type="text"
+            type="email"
             name="email"
             placeholder="Enter your email address"
             className="bg-tertiary p-4 text-white border font-medium"
+            required
           />
           <span className='text-white font-medium mt-3'>Message</span>
           <textarea
@@ -71,10 +69,19 @@ const Contact = () => {
             placeholder="Enter your message"
             rows="10"
             className="bg-tertiary p-4 text-white border font-medium"
+            required
           />
+          
+          {success && (
+            <div className="text-green-500 font-medium mt-2">
+              Thank you. I will get back to you as soon as possible.
+            </div>
+          )}
+          
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 w-fit text-white font-bold shadow-md shadow-primary '
+            disabled={loading}
+            className='bg-tertiary py-3 px-8 w-fit text-white font-bold shadow-md shadow-primary hover:bg-quaternary transition-colors'
           >
             {loading ? "Sending..." : "Send"}
           </button>
