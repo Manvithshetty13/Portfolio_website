@@ -1,22 +1,26 @@
-# 3D Parallax Developer Portfolio Website
+# Manvith Shetty's Portfolio
 
-![3D Parallax Developer Portfolio Thumbnail](https://i.ibb.co/86NQD5c/thumbnail-3d-portfolio-smaller.jpg)
+A modern, interactive portfolio website showcasing my skills, projects, and experience as an aspiring Data Analyst.
 
-## Introduction
+## Features
 
-I built myself a 3D developer portfolio website to replace my minimal portfolio and compliment my GitHub profile page and terminal website. This is a custom website I've been wanting to build for a while, that has the "wow" factor of my terminal website thanks to three.js 3D graphics, interactive animations, and parallax, while maintaining an easy-to-use and intuitive design. This website gives a prospective client or employer a quick look at me and my work as a developer, showing them what I can do with not just the projects listed, but the website itself. And yes, I know the parallax gets tricky when shrinking the window, but I'll fix that... one day... maybe. Maybe one of y'all can fix it for me.
+- Interactive 3D elements and parallax effects
+- Responsive design for all devices
+- Project showcase with links to GitHub repositories
+- Skills and education section
+- Contact information
 
-## Technologies
-- Vite - Build tool for the boilerplate and structure
-- JavaScript - Programming language
-- React - JavaScript library for building user interfaces
-- Tailwind - CSS framework
-- Three.js - Animated 3D graphics
-- Framer Motion - Interactive animations
-- Hostinger - Web hosting platform
-- GitHub - Version control & CI/CD
+## Technologies Used
 
-## Extra Resources
-- [Spaceman by wallmasterr](https://sketchfab.com/3d-models/tenhun-falling-spaceman-fanart-9fd80b6a259f41fd99e6f56eee686dc5)
-- [Planet Surface by jongjawi](https://stock.adobe.com/images/landscape-surface-of-planet-sky-space-science-fiction-fantasy-illustration/330880441?asset_id=330880441)
-- [Position Animation by Teshank](https://github.com/teshank2137/portfolio)
+- React.js
+- Vite
+- Tailwind CSS
+- Framer Motion
+- Three.js
+
+## Contact
+
+Feel free to reach out to me through:
+- [GitHub](https://github.com/Manvithshetty13)
+- [LinkedIn](https://www.linkedin.com/in/manvith-shetty-0a6215263/)
+- [Instagram](https://www.instagram.com/_manvith.shetty/)
